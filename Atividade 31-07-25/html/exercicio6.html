@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolução Exercicio 06</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <a href="atividade.html">Voltar</a>
+    <form class="form-container" action="">
+        <div class="form-item">
+            <label for="modelo-placa-de-mae">Modelo da Placa de Mãe</label>
+            <input type="text" name="modelo-placa-mae" id="modelo-placa-de-mae">
+            <label for="preco-placa-de-mae">Preço da Placa de Mãe</label>
+            <input type="number" name="preco-placa-mae" id="preco-placa-de-mae" placeholder="Preço R$">
+        </div>
+
+        <div class="form-item">
+            <label for="modelo-placa-de-video">Modelo da Placa de Video</label>
+            <input type="text" name="modelo-placa" id="modelo-placa-de-video">
+            <label for="preco-placa-de-video">Preço da Placa de Video</label>
+            <input type="number" name="preco-placa" id="preco-placa-de-video" placeholder="Preço R$">
+        </div>
+
+        <div class="form-item">
+            <label for="modelo-processador">Modelo Processador</label>
+            <input type="text" name="modelo-processador" id="modelo-processador">
+            <label for="preco-processador">Preço do Processador</label>
+            <input type="number" name="preco-processador" id="preco-processador" placeholder="Preço R$">
+        </div>
+
+        <div class="form-item">
+        <label for="modelo-ram">Modelo Memória RAM</label>
+        <input type="text" name="modelo-ram" id="modelo-ram">
+        <label for="preco-ram">Preço do RAM</label>
+        <input type="number" name="preco-ram" id="preco-ram" placeholder="Preço R$">
+        </div>
+
+        <div class="form-item">
+            <label for="modelo-fonte">Modelo Fonte</label>
+            <input type="text" name="modelo-fonte" id="modelo-fonte">
+            <label for="preco-fonte">Preço da Fonte</label>
+            <input type="number" name="preco-fonte" id="preco-fonte"placeholder="Preço R$">
+        </div>
+        <button onclick="formularioComponentes()">Calcular Valor Total</button>
+    </form>
+
+    <script src="../js/atividade.js"></script>
+</body>
+
+</html>
