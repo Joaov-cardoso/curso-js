@@ -136,24 +136,24 @@ function calculadoraIMCPromptEIfElse() {
     let resultadoIMC = indiceDeMassaCorporal.toFixed(2)
 
     let classificacao = ""
-    if (resultadoIMC < 18.5){
+    if (resultadoIMC < 18.5) {
         classificacao = "Abaixo do Peso";
-    }else if (resultadoIMC < 25){
+    } else if (resultadoIMC < 25) {
         classificacao = "Peso Normal";
-    }else if (resultadoIMC < 30){
+    } else if (resultadoIMC < 30) {
         classificacao = "Sobrepeso";
-    }else if (resultadoIMC < 35){
+    } else if (resultadoIMC < 35) {
         classificacao = "Obesidade Grau 1";
-    }else if (resultadoIMC < 40){
+    } else if (resultadoIMC < 40) {
         classificacao = "Obesidade Grau 2";
-    }else (resultadoIMC < 45)
+    } else if (resultadoIMC < 45)
         classificacao = "Obesidade Grau 3";
-    
+
     console.log(
         "Nome: " + nome +
         "\nPeso: " + peso +
         "\nAltura: " + altura +
-        "\n\nIMC: " + resultadoIMC + 
+        "\n\nIMC: " + resultadoIMC +
         "\nClassificação: " + classificacao
     )
 
@@ -207,20 +207,20 @@ function somaNumerosPrompt() {
     let divisao = numero1 / numero2;
 
     let classificacaoSoma = "";
-    if (soma > 0){
+    if (soma > 0) {
         classificacaoSoma = "Número Positivo"
-    }else if (soma && subtracao < 0){
+    } else if (soma && subtracao < 0) {
         classificacaoSoma = "Número Negativo"
-    }else if (soma && subtracao === 0){
+    } else if (soma && subtracao === 0) {
         classificacaoSoma = "Este número é zero"
     }
 
     let positivoNegativo = "";
-    if (subtracao > 0){
+    if (subtracao > 0) {
         positivoNegativo = "Número Positivo"
-    }else if (subtracao < 0){
+    } else if (subtracao < 0) {
         positivoNegativo = "Número Negativo"
-    }else if (subtracao === 0){
+    } else if (subtracao === 0) {
         positivoNegativo = "Este número é zero"
     }
 
@@ -228,8 +228,8 @@ function somaNumerosPrompt() {
         "Primeiro Núumero: " + numero1 +
         "\nSegundo Número: " + numero2 +
         "\n\nResultados: " +
-        "\nSoma: " + soma + " " + classificacaoSoma + 
-        "\nSubtração: " + subtracao + " " + positivoNegativo + 
+        "\nSoma: " + soma + " " + classificacaoSoma +
+        "\nSubtração: " + subtracao + " " + positivoNegativo +
         "\nMultiplicação: " + multiplicacao +
         "\nDivisão: " + divisao
     )
@@ -237,8 +237,8 @@ function somaNumerosPrompt() {
         "Primeiro Número: " + numero1 +
         "\nSegundo Número: " + numero2 +
         "\n\nResultados: " +
-        "\nSoma: " + soma + " " + classificacaoSoma + 
-        "\nSubtração: " + subtracao + " " + positivoNegativo + 
+        "\nSoma: " + soma + " " + classificacaoSoma +
+        "\nSubtração: " + subtracao + " " + positivoNegativo +
         "\nMultiplicação: " + multiplicacao +
         "\nDivisão: " + divisao
     )
@@ -364,24 +364,115 @@ function formularioComponentesPrompt() {
     )
 }
 /*Exercício 07: Procurar sobre if, if else, if else if*/
+function exercicio07If() {
+    let idade1 = parseFloat(document.getElementById("idade1").value);
 
 
+    if (idade1 >= 18) {
+        document.getElementById("resultadoIf").innerHTML = "Maior de idade";
+        console.log("Maior de idade");
+    }
+}
+
+function exercicio07IfElse() {
+    let idade2 = parseFloat(document.getElementById("idade2").value);
+    let maiorOuMenor;
+
+    if (idade2 >= 18) {
+        maiorOuMenor = "Maior de idade";
+    } else {
+        maiorOuMenor = "Menor de idade";
+    }
+
+    document.getElementById("resultadoIfElse").innerHTML = maiorOuMenor;
+    console.log(maiorOuMenor);
+}
+
+function exercicio07IfElseIf() {
+    let idade3 = parseFloat(document.getElementById("idade3").value);
+    let faseDaVida;
+
+    if (idade3 >= 0 && idade3 <= 11) {
+        faseDaVida = "Criança";
+    } else if (idade3 >= 12 && idade3 <= 17) {
+        faseDaVida = "Adolescente";
+    } else if (idade3 >= 18 && idade3 <= 59) {
+        faseDaVida = "Adulto";
+    } else if (idade3 >= 60) {
+        faseDaVida = "Idoso";
+    } else {
+        faseDaVida = "Idade inválida";
+    }
+
+    document.getElementById("resultadoIfElseIf").innerHTML = faseDaVida;
+}
 
 /*Exercício 08: While*/
+function exercicio08() {
+    let idade = 19;
+    let chute;
 
+    while (chute != idade) {
+        chute = prompt("Acerte a idade do Harry Potter entre 0 a 100 anos");
 
+        if (chute == idade) {
+            alert(`Você acertou a idade do Harry Potter, ${idade} anos`);
+        } else {
+            if (chute > idade) {
+                alert(`A idade é menor que ${chute}`);
+            } else {
+                alert(`A idade é maior que ${chute}`);
+            }
+        }
+    }
+}
 
 /*Exercício 09: Vetor*/
 
+    //Vetor inicial.
+let nomes = ["Hermione", "Harry", "Rony"];
 
+//Mostra os nomes na tela.
+function mostrarNomes() {
+    //nomes.join(", "): deixa o vetor em uma string separada por vírgulas.
+    //textContent: coloca essa string no parágrafo com id resultado.
+    document.getElementById("resultado09").textContent = nomes.join(", ");
+}
 
+//Adiciona um novo nome ao vetor.
+function adicionarNome() {
+    let input = document.getElementById("novoNome");
+    //pega o que o usuário digitou. /remove espaços extras.
+    let nome = input.value.trim();
 
+    if (nome !== "") {
+        //adiciona o nome ao vetor.
+        nomes.push(nome);
+        //limpa o campo de texto.
+        input.value = "";
+        //atualiza os nomes mostrados na tela.
+        mostrarNomes();
+    }
+}
 
-/*Exercício 10: For
+//Chama a função ao final para garantir que os nomes iniciais sejam carregados quando abrir a pagina
+mostrarNomes();
+/*Exercício 10: For*/
+function exercicio10() {
+    //Pega o elemento <ul> do HTML e armazena na variável.
+    let lista = document.getElementById("lista-numeros");
 
-
-
-
-
-
+/*
+Início do loop for.
+Começa com i = 1.
+Executa enquanto i for menor ou igual a 5.
+A cada repetição, incrementa i em 1.
 */
+    for (let i = 1; i <= 5; i++) {
+        //Cria um novo elemento <li>.
+        const item = document.createElement("li");
+        item.textContent = `Número ${i}`;   
+        //Adiciona o novo <li> como filho da lista <ul>
+        lista.appendChild(item);
+    }
+}
