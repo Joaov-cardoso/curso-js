@@ -198,8 +198,8 @@ function somaNumeros() {
     )
 }
 function somaNumerosPrompt() {
-    let numero1 = Number(prompt("Primeiro Número"));
-    let numero2 = Number(prompt("Segundo Número"));
+    let numero1 = parseInt(prompt("Primeiro Número"));
+    let numero2 = parseInt(prompt("Segundo Número"));
 
     let soma = numero1 + numero2;
     let subtracao = numero1 - numero2;
