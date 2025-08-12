@@ -189,7 +189,7 @@ function exercicio14() {
     let lado2 = parseFloat(prompt("Lado 2 do triangulo").replace(",", "."));
     let lado3 = parseFloat(prompt("Lado 3 do triangulo").replace(",", "."))
 
-    if (lado1 + lado2 > lado3) {
+    if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
         alert("Triangulo válido")
         console.log("Triangulo válido")
     } else {
