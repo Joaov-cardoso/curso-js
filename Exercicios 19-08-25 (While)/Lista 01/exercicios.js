@@ -48,7 +48,7 @@ function exercicio3() {
 }
 
 function exercicio4() {
-    let indice = 0;
+    let indice = 0;     
     let maiorAltura = 0;
     while (indice < 3) {
         let altura = parseFloat(prompt("Digite a altura").replace(",", "."));
